@@ -27,8 +27,6 @@ Field -> member_no = models.ForeignKey(Members, on_delete=models.CASCADE)
 To facilitate data entry and debugging all tables have been registered with the DJANGO Admin interface.
 [admin.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/admin.py)
 
-`Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/admin.py`
-
 Data can now be edited using the DJango admin interface:
 
 username: dcappiello
@@ -62,4 +60,4 @@ To run the server use the command `python manage.py runserver`.
 
 The Aeroplane data cna now be retrieved by the front end at the following address `http://127.0.0.1:8000/ams/aeroplanes` using the GET method.
 
-![Postman Screenshot](postman.png)
+![Postman Screenshot](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/Postman.png)
