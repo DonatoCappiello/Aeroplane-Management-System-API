@@ -7,7 +7,7 @@ The connection to the AMS_DB mySQL database is implemented using the `DJANGO RES
 ## Models
 The Python objects that map the database can be found here:
 
-[models](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/models.py)
+[models.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/models.py)
 
 All models implements the __str__ function for dispaly and debug purposes.
 
@@ -25,6 +25,7 @@ Field -> member_no = models.ForeignKey(Members, on_delete=models.CASCADE)
 ## ADMIN interface
 
 To facilitate data entry and debugging all tables have been registered with the DJANGO Admin interface.
+[admin.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/admin.py)
 
 `Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/admin.py`
 
@@ -37,13 +38,13 @@ password: Sigmatic241!
 
 Serializers convert data a JSON format that the Angular 2 front end can understand.
 
-`Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/serializers.py`
+[serializers.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/flyingclub/serializers.py)
 
 ## Expose DATA to the world: API views
 
 Serve DATA to the front end
 
-`Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/apy.py`
+[api.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/flyingclub/serializers.py)
 
 We are not performing sofisticated query here, just using an API view to retrieve all Aeroplanes and serialize them  into a JSON object.
 
@@ -53,7 +54,7 @@ please note that the ModelViewSet of the DJango Framework has all the functional
 
 URLs tells DJANGO where to serve the data.
 
-`/Users/dcappiello/src/Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/urls.py`
+[urls.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/flyingclub/urls.p)
 
 ## Results
 
