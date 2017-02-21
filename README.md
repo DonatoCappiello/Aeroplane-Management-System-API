@@ -7,9 +7,7 @@ The connection to the AMS_DB mySQL database is implemented using the `DJANGO RES
 ## Models
 The Python objects that map the database can be found here:
 
-https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/models.py
-
-`Aeroplane-Management-System-API/AeroplaneManagementSystemAPI/FlyingClub/models.py`.
+[models](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/FlyingClub/models.py)
 
 All models implements the __str__ function for dispaly and debug purposes.
 
