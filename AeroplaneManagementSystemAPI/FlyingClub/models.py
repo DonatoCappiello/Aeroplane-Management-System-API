@@ -13,12 +13,14 @@ class Aeroplanes(models.Model):
     hourly_rate = models.FloatField()
 
     def __str__(self):
-        return "Aeroplanes: {self.registration_no,\
-                                self.type, aircraft_hours,\
-                                self.hourly_rate}".format()
+        return "Aeroplanes: {}".format(self.registration_no,\
+                                self.type,\
+                                self.aircraft_hours,\
+                                self.hourly_rate)
 
     class Meta:
         db_table = 'aeroplanes'
+        verbose_name_plural = 'aeroplanes'
 
 @python_2_unicode_compatible
 class AeroplanesAvailabilityErrors(models.Model):
@@ -27,12 +29,13 @@ class AeroplanesAvailabilityErrors(models.Model):
     error_description = models.TextField()
 
     def __str__(self):
-        return "AeroplanesAvailabilityErrors: {self.error_id,\
+        return "AeroplanesAvailabilityErrors: {}".format(self.error_id,\
                                                 self.registration_no,\
-                                                self.error_description}".format()
+                                                self.error_description)
 
     class Meta:
         db_table = 'aeroplanes_availability_errors'
+        verbose_name_plural = 'aeroplanes_availability_errors'
 
 @python_2_unicode_compatible
 class Amends(models.Model):
@@ -45,15 +48,17 @@ class Amends(models.Model):
     amend_completed_by = models.CharField(max_length=50)
 
     def __str__(self):
-        return "Amends: {self.amend_id,\
+        return "Amends: {}".format(self.amend_id,\
                             self.amend_description,\
                             self.amend_priority,\
                             self.person_for_the_task,\
-                            self.outcome, amend_completed_date,\
-                            self.amend_completed_by}".format()
+                            self.outcome,\
+                            self.amend_completed_date,\
+                            self.amend_completed_by)
 
     class Meta:
         db_table = 'amends'
+        verbose_name_plural = 'amends'
 
 @python_2_unicode_compatible
 class Flights(models.Model):
@@ -75,7 +80,7 @@ class Flights(models.Model):
     member_no = models.IntegerField()
 
     def __str__(self):
-        return "Flights: {self.flight_id,\
+        return "Flights: {}".format(self.flight_id,\
                             self.registration_no,\
                             self.date,\
                             self.student_passenger_name,\
@@ -90,10 +95,11 @@ class Flights(models.Model):
                             self.field_serviceability,\
                             self.cheque_no,\
                             self.treasurer_validation,\
-                            self.member_no}".format()
+                            self.member_no)
 
     class Meta:
         db_table = 'flights'
+        verbose_name_plural = 'flights'
 
 @python_2_unicode_compatible
 class ForecastMaintananceCompleted(models.Model):
@@ -104,14 +110,15 @@ class ForecastMaintananceCompleted(models.Model):
     completed_by = models.IntegerField(blank=True, null=True)
 
     def __str__(self):
-        return "ForecastMaintananceCompleted: {self.job_completed_id,\
+        return "ForecastMaintananceCompleted: {}".format(self.job_completed_id,\
                                                 self.job_list_id,\
                                                 self.aircraft_hours_after_job_completed,\
                                                 self.date_completed,\
-                                                self.completed_by}".format()
+                                                self.completed_by)
 
     class Meta:
         db_table = 'forecast_maintanance_completed'
+        verbose_name_plural = 'forecast_maintanance_completed'
 
 @python_2_unicode_compatible
 class ForecastMaintananceList(models.Model):
@@ -122,14 +129,15 @@ class ForecastMaintananceList(models.Model):
     job_frequency_months = models.SmallIntegerField(blank=True, null=True)
 
     def __str__(self):
-        return "ForecastMaintananceList: {self.job_list_id,\
+        return "ForecastMaintananceList: {}".format(self.job_list_id,\
                                             self.registration_no,\
                                             self.job_name,\
                                             self.job_frequency_hours,\
-                                            self.job_frequency_months}".format()
+                                            self.job_frequency_months)
 
     class Meta:
         db_table = 'forecast_maintanance_list'
+        verbose_name_plural = 'forecast_maintanance_list'
 
 @python_2_unicode_compatible
 class Members(models.Model):
@@ -147,7 +155,7 @@ class Members(models.Model):
     role_id = models.IntegerField(db_column='role_ID')  # Field name made lowercase.
 
     def __str__(self):
-        return "Members: {self.licence_no,\
+        return "Members: {}".format(self.licence_no,\
                             self.name,\
                             self.surname,\
                             self.member_initials,\
@@ -158,10 +166,11 @@ class Members(models.Model):
                             self.medical_expiring_date,\
                             self.certificate_of_experience_expiring_date,\
                             self.flying_order_book_signature_date,\
-                            self.role_id}".format()
+                            self.role_id)
 
     class Meta:
         db_table = 'members'
+        verbose_name_plural = 'members'
 
 @python_2_unicode_compatible
 class MembersRoles(models.Model):
@@ -169,11 +178,12 @@ class MembersRoles(models.Model):
     role_name = models.CharField(max_length=20)
 
     def __str__(self):
-        return "MembersRoles: {self.role_id,\
-                                self.role_name}".format()
+        return "MembersRoles: {}".format(self.role_id,\
+                                self.role_name)
 
     class Meta:
         db_table = 'members_roles'
+        verbose_name_plural = 'members_roles'
 
 @python_2_unicode_compatible
 class MembersStatusErrors(models.Model):
@@ -182,12 +192,13 @@ class MembersStatusErrors(models.Model):
     member_no = models.IntegerField()
 
     def __str__(self):
-        return "MembersStatusErrors: {self.error_id,\
+        return "MembersStatusErrors: {}".format(self.error_id,\
                                         self.error_description,\
-                                        self.member_no}".format()
+                                        self.member_no)
 
     class Meta:
         db_table = 'members_status_errors'
+        verbose_name_plural = 'members_status_errors'
 
 @python_2_unicode_compatible
 class Serviceability(models.Model):
@@ -200,14 +211,15 @@ class Serviceability(models.Model):
     completed_by = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
-        return "Serviceability: {self.serviceability_id'\
+        return "Serviceability: {}".format(self.serviceability_id,\
                                     self.registration_no,\
                                     self.serviceability_description,\
                                     self.job_card,\
                                     self.work_carried_out,\
                                     self.date_completed,\
-                                    self.completed_by}".format()
+                                    self.completed_by)
 
     class Meta:
         db_table = 'serviceability'
+        verbose_name_plural = 'serviceability'
     
