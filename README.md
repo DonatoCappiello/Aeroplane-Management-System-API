@@ -54,7 +54,7 @@ please note that the ModelViewSet of the DJango Framework has all the functional
 
 URLs tells DJANGO where to serve the data.
 
-[urls.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/flyingclub/urls.p)
+[urls.py](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/AeroplaneManagementSystemAPI/flyingclub/urls.py)
 
 ## Results
 
