@@ -58,6 +58,6 @@ URLs tells DJANGO where to serve the data.
 
 To run the server use the command `python manage.py runserver`.
 
-The Aeroplane data cna now be retrieved by the front end at the following address `http://127.0.0.1:8000/ams/aeroplanes` using the GET method.
+The Aeroplane data can now be retrieved by the front end at the following address `http://127.0.0.1:8000/ams/aeroplanes` using the GET method.
 
 ![Postman Screenshot](https://github.com/DonatoCappiello/Aeroplane-Management-System-API/blob/master/postman.jpg)
